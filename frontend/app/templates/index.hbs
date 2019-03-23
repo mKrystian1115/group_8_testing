@@ -1,0 +1,36 @@
+<div class="hero-image">
+  <div class="hero-text">
+    <h1> Holborn Car Park Sevices</h1>
+    <h3 class="hero-subtitle"> Ticket input </h3>
+    <div class="columns">
+      <div class="column">
+        <h3>Get New Ticket:</h3>
+        <h3>(Insert your Car Number Plate e.g: IL05 UWW):</h3>
+        {{input type="txt" value=this.numplate}}
+        {{#bulma-button  class="button is-warning is-large is-outlined" onmousedown=(action "create" this.numplate)}}
+          Submit
+        {{/bulma-button}}
+      </div>
+      <div class="column">
+        <h3>
+          Get Ticket Information:
+        </h3>
+        <h3>
+          (Insert Ticket Number Below e.g: 61):
+        </h3>
+        {{input type="number" value=this.id id="appt" name="appt" size=50px}}
+        {{#link-to "ticket-info" this.id class="button is-warning is-large is-outlined"}}
+          Submit
+        {{/link-to}}
+      </div>
+    </div>
+
+    <h3> This is project B for CS1813 Software Development </h3>
+    {{#link-to "login"
+      class="button is-warning is-medium is-outlined"
+    }}
+      <span>Manager Login</span>
+    {{/link-to}}
+  </div>
+
+</div>

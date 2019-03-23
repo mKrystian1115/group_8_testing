@@ -1,0 +1,45 @@
+<div class="menu-bar">
+  {{top-bar}}
+</div>
+<div class="title">
+  <h1> Current Statistics </h1>
+  <div class="box full-height">
+    <div class="content is-dark has-text-centered">
+      <div class="rows">
+        <div class="columns">
+          <p>Cars Parked</p>
+        </div>
+        <ul>
+          {{#each this.model.tickets as |ticket|}}
+            {{#unless ticket.paid}}
+              <li>
+                <div class="box">
+                  <article class="media">
+                    <div class="media-left">
+                      <p><u>Ticket Number </u></p>
+                      <p> {{ticket.id}} </p>
+                    </div>
+                    <div class="media-content">
+                      <div class="content">
+                        <p>
+                          Start Time: {{ticket.start}}
+                        </p>
+                        <p>
+                          Current Duration: {{ticket.duration}} hours
+                        </p>
+                        <p>
+                          Cost: £{{multiply ticket.duration this.model.prices.price}}
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+
+                </div>
+              </li>
+            {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

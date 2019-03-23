@@ -1,0 +1,18 @@
+<div class="menu-bar">
+  {{top-bar}}
+</div>
+<div class="title">
+  <h1> Price and Discounts </h1>
+  <div class="box full-height">
+    <div class="content is-dark has-text-centered">
+      <div class="rows">
+        <p>Current Price per Hour:   £{{this.model.price}}</p>
+        <p>Change Price: </p>
+        {{input type="number" value=this.price id="appt" name="appt" min="1.00" max="10.00" size=50px}}
+        {{#bulma-button onmousedown=(action "update" this.price )}}
+          Submit
+        {{/bulma-button}}
+      </div>
+    </div>
+  </div>
+</div>

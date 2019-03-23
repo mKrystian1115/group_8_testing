@@ -1,0 +1,39 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <h1> Holborn Car Park Sevices</h1>
+    <h3 class="hero-subtitle"> Management system </h3>
+    <div class="menu-bar">
+      <div class="container" align="center">
+        <form>
+          <label for="uname"><h3>Username</h3></label>
+          <input type="text" placeholder="Enter Username" name="uname">
+
+          <label for="psw"><h3>Password</h3></label>
+          <input type="password" placeholder="Enter Password" name="psw">
+        </form>
+        {{#link-to "manager.menu"
+          class="button is-warning is-large is-outlined"
+        }}
+          <span>Login</span>
+        {{/link-to}}
+        <label>
+          <h3> Remember me <input type="checkbox" checked="checked" name="remember"></h3>
+
+        </label>
+
+
+        {{#link-to "index"
+          class="button is-warning is-large is-outlined"
+        }}
+          <span>Go back</span>
+        {{/link-to}}
+      </div>
+    </div>
+    <h3> This is project B for CS1813 Software Development </h3>
+  </div>
+</div>

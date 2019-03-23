@@ -1,0 +1,37 @@
+<div class="menu-bar">
+  {{top-bar}}
+</div>
+<div class="title">
+  <h1> Statistics </h1>
+  <div class="box full-height">
+    <div class="content is-dark has-text-centered">
+      <h4>Data for the last 7 days</h4>
+      {{#each this.model as |ticket|}}
+          <li>
+            <div class="box">
+              <article class="media">
+                <div class="media-left">
+                  <p><u>Ticket Number </u></p>
+                  <p> {{ticket.id}} </p>
+                </div>
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      Start Time: {{ticket.start}}
+                    </p>
+                    <p>
+                      Duration: {{ticket.duration}} hours
+                    </p>
+                    <p>
+                      Paid: {{ticket.paid}}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </li>
+      {{/each}}
+    </div>
+  </div>
+
+</div>

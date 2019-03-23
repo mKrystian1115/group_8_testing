@@ -1,0 +1,19 @@
+<div class="menu-bar">
+  {{top-bar}}
+</div>
+<div class="title">
+  <h1> Set Happy Hour </h1>
+  <div class="box full-height">
+    <div class="content is-dark has-text-centered">
+      <div class="rows">
+        <p>Current Happy Hours:   {{this.model.happyhour}}</p>
+        <p>Change start time: </p>
+        {{input type="time" value=this.time id="appt" name="appt" min="5:00" max="23:00" size=50px}}
+        <p>Opening hours are from 5:00 to 23:00</p>
+        {{#bulma-button onmousedown=(action "update" this.time)}}
+          Submit
+        {{/bulma-button}}
+      </div>
+    </div>
+  </div>
+</div>

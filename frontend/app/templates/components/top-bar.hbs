@@ -1,0 +1,89 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <div class="navbar-item">
+      <div class="field is-grouped">
+        <p class="control">
+          {{#link-to "manager.menu"}}
+            <span class="icon">
+              {{fa-icon "fas fa-car-side"}}
+            </span>
+            <span class="title-button">
+              Holborn Car Park Services
+            </span>
+          {{/link-to}}
+        </p>
+      </div>
+      <div class="field is-grouped">
+        <p class="control">
+          {{#link-to "manager.current"
+            class="button is-warning is-medium is-outlined"
+          }}
+            <span class="icon">
+              {{fa-icon "far fa-chart-line"}}
+            </span>
+            <span>
+              Current
+            </span>
+          {{/link-to}}
+          {{#link-to "manager.happy-hour"
+            class="button is-warning is-medium is-outlined"
+          }}
+            <span class="icon">
+              {{fa-icon "far fa-grin-beam"}}
+            </span>
+            <span>
+              Happy Hour
+            </span>
+          {{/link-to}}
+          {{#link-to "manager.price"
+            class="button is-warning is-medium is-outlined"
+          }}
+            <span class="icon">
+              {{fa-icon "far fa-money-bill-alt"}}
+            </span>
+            <span>
+              Price
+            </span>
+          {{/link-to}}
+          {{#link-to "manager.statistics"
+            class="button is-warning is-medium is-outlined"
+          }}
+            <span class="icon">
+              {{fa-icon "fas fa-chart-pie"}}
+            </span>
+            <span>
+              Statistics
+            </span>
+          {{/link-to}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="main-buttons" class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item">
+      </div>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="field is-grouped">
+          <p class="control">
+            {{#link-to "login"
+              class="button is-light"
+            }}
+              <span>Sign out</span>
+            {{/link-to}}
+            <a class="button is-primary" href="https://github.com/porrige51122/Holborn-Carpark-System">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Github</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

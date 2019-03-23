@@ -1,0 +1,30 @@
+<div align="center">
+  <h1> Holborn Car Park Sevices</h1>
+  <h3> Your ticket number is {{this.model.tickets.id}} </h3>
+  <h3> You have been here since {{this.model.tickets.start}} </h3>
+  <h3> For: {{this.model.tickets.duration}} hours </h3>
+  <h3> Total Cost: £{{multiply this.model.tickets.duration this.model.prices.price}}</h3>
+  <div>
+    {{#unless this.model.tickets.paid}}
+      {{#bulma-button  class="button is-warning is-large is-outlined" onmousedown=(action "update" this.model.tickets.id)}}
+        Pay now
+      {{/bulma-button}}
+    {{else}}
+      <h3> Thanks for paying </h3>
+    {{/unless}}
+  </div>
+  <div class="menu-bar">
+    <div class="container" align="center">
+      {{#bulma-columns}}
+        {{#bulma-column}}
+          {{#link-to "index"
+            class="button is-warning is-large is-outlined"
+          }}
+            <span>Go back</span>
+          {{/link-to}}
+        {{/bulma-column}}
+      {{/bulma-columns}}
+    </div>
+  </div>
+  <h3> This is project B for CS1813 Software Development </h3>
+</div>
